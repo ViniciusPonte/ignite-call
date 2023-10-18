@@ -4,7 +4,7 @@ import { Container, Header } from '../styles'
 import { ArrowRight, Check } from 'phosphor-react'
 import { AuthError, ConnectBox, ConnectItem } from './styles'
 import { signIn, useSession } from 'next-auth/react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
 
 export default function ConnectCalendar() {
   const session = useSession()
@@ -15,6 +15,12 @@ export default function ConnectCalendar() {
 
   async function handleConnectGoogle() {
     await signIn('google')
+  }
+
+  const router = useRouter()
+
+  async function handleNavigateToNextStep() {
+    router.push('/register/time-intervals')
   }
 
   return (
@@ -53,7 +59,11 @@ export default function ConnectCalendar() {
             permissões de acesso ao Google Calendar
           </AuthError>
         )}
-        <Button type="submit" disabled={!isSignedIn}>
+        <Button
+          type="submit"
+          disabled={!isSignedIn}
+          onClick={handleNavigateToNextStep}
+        >
           Próximo passo <ArrowRight />
         </Button>
       </ConnectBox>
