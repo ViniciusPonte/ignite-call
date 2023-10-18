@@ -1,5 +1,7 @@
-"use client"
-import { globalStyles } from "@/styles/global"
+/* eslint-disable @next/next/no-async-client-component */
+'use client'
+import { globalStyles } from '@/styles/global'
+import { SessionProvider } from 'next-auth/react'
 
 globalStyles()
 
@@ -10,7 +12,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SessionProvider>{children}</SessionProvider>
+      </body>
     </html>
   )
 }
