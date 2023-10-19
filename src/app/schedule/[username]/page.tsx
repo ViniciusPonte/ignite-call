@@ -8,6 +8,7 @@ import { GetStaticProps, NextPageContext } from 'next'
 import { useEffect, useState } from 'react'
 import { api } from '@/lib/axios'
 import { ScheduleForm } from './ScheduleForm'
+import { NextSeo } from 'next-seo'
 
 interface ScheduleProps {
   params: {
@@ -36,16 +37,19 @@ export default function Schedule({ params }: ScheduleProps) {
   }, [username])
 
   return (
-    <Container>
-      {user && (
-        <UserHeader>
-          <Avatar src={user.avatarUrl} />
-          <Heading>{user.name}</Heading>
-          <Text>{user.bio}</Text>
-        </UserHeader>
-      )}
+    <>
+      <NextSeo title={`Agendar com ${user ? user.name : ''} | Ignite Call`} />
+      <Container>
+        {user && (
+          <UserHeader>
+            <Avatar src={user.avatarUrl} />
+            <Heading>{user.name}</Heading>
+            <Text>{user.bio}</Text>
+          </UserHeader>
+        )}
 
-      <ScheduleForm username={username} />
-    </Container>
+        <ScheduleForm username={username} />
+      </Container>
+    </>
   )
 }
