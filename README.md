@@ -7,9 +7,6 @@ O Ignite Call é um projeto de estudo desenvolvido através da plataforma Rocket
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Capturas de Tela](#capturas-de-tela)
 - [Requisitos de Instalação](#requisitos-de-instalação)
-- [Como Usar](#como-usar)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
 
 ## Tecnologias Utilizadas
 
@@ -23,28 +20,29 @@ O Ignite Call é um projeto de estudo desenvolvido através da plataforma Rocket
 
 <div align="center">
    <h3>Página inicial</h3>
-        <img src="public/01.png" alt="Home screen" width="200px"/>
+        <img src="public/01.png" alt="Home screen" width="500px"/>
     <h3>Conexão com o Google</h3>
-        <img src="public/02.png" alt="Google Connection" width="200px"/>
+        <img src="public/02.png" alt="Google Connection" width="500px"/>
     <h3>Configuração de disponibilidade</h3>
-        <img src="public/03.png" alt="Disponibility" width="200px"/>
+        <img src="public/03.png" alt="Disponibility" width="500px"/>
     <h3>Última etapa de registro</h3>
-        <img src="public/04.png" alt="Finishing registering" width="200px"/>
+        <img src="public/04.png" alt="Finishing registering" width="500px"/>
     <h3>Agenda do usuário</h3>
-        <img src="public/05.png" alt="Calendar Date Picker" width="200px"/>
+        <img src="public/05.png" alt="Calendar Date Picker" width="500px"/>
     <h3>Criando uma reserva</h3>
-        <img src="public/06.png" alt="Scheduling" width="200px"/>   
+        <img src="public/06.png" alt="Scheduling" width="500px"/>   
     <h3>Agendamento no Google Calendar</h3>
-        <img src="public/05.png" alt="Google Calendar" width="200px"/> 
+        <img src="public/07.png" alt="Google Calendar" width="500px"/> 
 </div>
 
 ## Requisitos de Instalação
 
 Para executar o projeto, siga os passos abaixo:
 
-```bash
 1. Clone este repositório.
+```bash
 $ git clone https://github.com/ViniciusPonte/ignite-call.git
+```
 
 2. Certifique-se de ter o Docker instalado em seu sistema.
 
@@ -53,7 +51,11 @@ $ git clone https://github.com/ViniciusPonte/ignite-call.git
 4. Execute docker start 'nome do banco' para iniciar o aplicativo em um contêiner Docker.
 
 5. Instale as dependencias da aplicação
+```bash
 $ npm i
+```
 
 5. Inicie a aplicação através do comando
+```bash
 $ npm run dev
+``````
